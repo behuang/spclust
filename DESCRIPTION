@@ -1,0 +1,16 @@
+Package: spclust
+Type: Package
+Title: Selective phenotyping for experimental crosses
+Version: 1.3
+Date: 2013-05-08
+Author: Emma Huang
+Maintainer: Emma Huang <Emma.Huang@csiro.au>
+Description: Selection of subsets of experimental crosses in order to
+        maximize genetic diversity
+License: GPL-2
+LazyLoad: Yes
+Depends: qtl, cluster
+Suggests: qtlDesign, mpMap
+Collate: 'plclust_in_colour.R' 'spclust.R' 'spdist.R'
+        'calc.genoprob2.R' 'generateNAMfounders.R'
+        'generateNAMpedigree.R' 'NAM2cross.R'
