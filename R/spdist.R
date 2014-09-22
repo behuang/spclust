@@ -59,7 +59,7 @@ spdist <- function(object, type=c("bc", "f2", "magic", "nam"))
 	if (type=="magic")
 	{
 		if (!inherits(object, "mpcross")) stop("Must input object of class mpcross to compute MAGIC distance.\n")
-		mpp <- mpprob(object, program="qtl", threshold=.9)
+		if (inherits(object, "mpprob")) mpp <- object else mpp <- mpprob(object, program="qtl", threshold=.9)
 		prmat <- lapply(mpp$prob, function(x) x)
 		prmat <- do.call("cbind", prmat)
 		rownames(prmat) <- rownames(mpp$finals)
